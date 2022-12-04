@@ -1,5 +1,5 @@
-question_turn = "player1"
-answer_turn = "player2"
+question_turn = "player1";
+answer_turn = "player2";
 
 function Submit(){
     number1 = document.getElementById("number_1").value;
@@ -25,6 +25,7 @@ function check(){
         update_player2_score = player2_score +1;
         document.getElementById("player2_score").innerHTML = update_player2_score;
     }
+
     if(question_turn == "player1"){
      question_turn = "player2";
      document.getElementById("player_question").innerHTML = "Question Turn : " + player2_name; 
@@ -33,5 +34,14 @@ function check(){
      question_turn = "player1";
      document.getElementById("player_question").innerHTML = "Question Turn : " + player1_name; 
      }
+
+     if(answer_turn == "player1"){
+        answer_turn = "player2";
+        document.getElementById("player_question").innerHTML = "Answer Turn : " + player2_name; 
+       }
+       else{
+        answer_turn = "player1";
+        document.getElementById("player_question").innerHTML = "Answer Turn : " + player1_name; 
+        }
  }
 }
